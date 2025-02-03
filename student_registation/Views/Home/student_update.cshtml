@@ -1,0 +1,91 @@
+﻿@model student_registation.Models.studentReg
+@{
+    ViewBag.Title = "student_update";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>student_update</h2>
+
+
+<style>
+    .reg {
+        height: auto;
+        width: 600px;
+        margin: 20px auto;
+        padding: auto;
+        border: 2px solid black;
+        box-shadow: 2px 2px 2px 2px green;
+        box-sizing: border-box;
+        background-color: lightcyan;
+    }
+
+    label, input {
+        margin: 5px;
+        padding: 5px;
+        width: 580px
+    }
+
+    input {
+        display: block;
+    }
+
+    button {
+        margin: 5px;
+        padding: 5px;
+        width: 580px;
+        background-color: green;
+    }
+</style>
+
+<div class="reg">
+    <h2>Update Student Regisraion Form</h2>
+    <form method="post" action="@Url.Action("PostUpdatePage","Home")">
+
+        <label id="fistname">First Name :</label>
+        <input type="text" id="fistname" value="@Model.FirstName" name="FirstName" placeholder="Enter First Name" />
+
+        <input type="hidden" name="id" value="@Model.id" />
+
+
+        <label id="middlename">Middle Name :</label>
+        <input type="text" id="middlename" value="@Model.MiddleName" name="MiddleName" placeholder="Enter First Name" />
+
+
+        <label id="lastname">Last Name :</label>
+        <input type="text" id="lastname" value="@Model.LastName" name="LastName" placeholder="Enter Last Name" />
+
+        <label name="course">Courses :</label>
+        <select id="couses" data-selector="@Model.Courses" name="Courses">
+            <option value="0">--Select--</option>
+            <option value="cse">CSE</option>
+            <option value="me">ME</option>
+            <option value="lt">LT</option>
+        </select>
+
+        <label for="gender" >Gender :</label>
+        <input style="display:inline" type="radio" id="f" value="@Model.Gender" name="Gender" value="F" />
+        <label id="f">Female</label>
+        <input style="display:inline" type="radio" id="m" value="@Model.Gender" name="Gender" value="M" />
+        <label id="f">Male</label>
+
+        <label id="phoneCode" name="phoneCode">Phone :</label>
+        <input type="text" id="phoneCode" value="@Model.PhoneCode" name="PhoneCode" value="+91 " />
+        <input type="text" id="Phone" value="@Model.Phone" name="Phone" placeholder="Phone No." />
+
+        <label id="address" name="Curr_Address">Current Address :</label>
+        <input type="text" height="40" name="Curr_Address" width="400" placeholder="Current Address" value="@Model.Curr_Address" />
+
+        <label id="email" name="email">Email :</label>
+        <input type="email" id="email" value="@Model.Email" name="Email" placeholder="Enter Email" />
+
+        <label name="password">Password</label>
+        <input type="password" value="@Model.Password" name="Password" id="password" placeholder="Enter Password" />
+
+        <label name="re_password">Re-type Password</label>
+        <input type="password" value="@Model.Re_Password" name="Re_Password" id="re_password" placeholder="Enter Password" />
+
+        <button type="submit">Update Registaion </button>
+
+
+    </form>
+</div>

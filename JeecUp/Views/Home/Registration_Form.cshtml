@@ -1,0 +1,94 @@
+﻿
+@{
+    ViewBag.Title = "Registration_Form";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="formcontainer">
+    <div class="textcenter">
+        <h4>Registration Form</h4>
+    </div>
+
+    <form action="#" method="post">
+        <section class="formsection">
+            <h3>Personal Details</h3>
+
+            <label for="name">Name (नाम)</label>
+            <input type="text" id="name" name="name" placeholder="Candidate Name" required>
+
+            <label for="fathername">Father's Name (पिता का नाम)</label>
+            <input type="text" id="fathername" name="fathername" placeholder="Father Name" required>
+
+            <label for="mothername">Mother's Name (मां का नाम)</label>
+            <input type="text" id="mothername" name="mothername" placeholder="Mother Name" required>
+
+            <label for="dob">Date of Birth (जन्म तिथि)</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="gender">Gender (लिंग)</label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </section>
+
+        <section class="formsection">
+            <h3>Aadhaar Information</h3>
+
+            <label>
+                <input type="radio" name="aadhaar" value="agree" required>
+                I voluntarily agree to share my Aadhaar Number and I am aware that it will be used to establish my identity for UPJEE2025. <br />
+                मैं स्वेच्छा से अपना आधार नंबर साझा करने के लिए सहमत हूं और मुझे पता है कि इसका उपयोग यूआईडीएआई के आधार रिकॉर्ड में उपलब्ध मेरे व्यक्तिगत पहचान विवरण का मिलान करके UPJEE2025 के लिए मेरी पहचान स्थापित करने के लिए किया जाएगा।
+            </label>
+
+            <label>
+                <input type="radio" name="aadhaar" value="agree" required>
+                My information on Aadhaar is not the same as entered in the Application Form. <br />
+                आधार कार्ड पर मेरी जानकारी वही नहीं है जो आवेदन पत्र में दर्ज की गई है |
+            </label>
+
+
+            <label>
+                <input type="radio" name="aadhaar" value="disagree" required>
+                I am not willing to share my Aadhaar Number.<br />
+                मैं अपना आधार नंबर साझा करने को तैयार नहीं हूं।
+            </label>
+        </section>
+
+        <section class="formsection">
+            <h3>Contact Details</h3>
+
+            <label for="isdcode">ISD Code</label>
+            <select>
+                <option>India(91)</option>
+            </select>
+
+            <label for="mobile">Mobile Number (मोबाइल नंबर)</label>
+            <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number" required>
+
+            <label for="email">Email ID (ईमेल आईडी)</label>
+            <input type="email" id="email" name="email" placeholder="Email ID" required>
+        </section>
+
+        <section class="formsection">
+            <h3>Create Password</h3>
+
+            <label for="password">Choose your Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirmpassword">Confirm Password</label>
+            <input type="password" id="confirmpassword" name="confirmpassword" required>
+        </section>
+
+        <section class="formsection">
+            <h3>Security Pin</h3>
+
+            <label for="securitypin">Security Pin</label>
+            <input type="password" id="securitypin" name="securitypin" required>
+
+            <button type="submit">Submit</button>
+        </section>
+    </form>
+</div>

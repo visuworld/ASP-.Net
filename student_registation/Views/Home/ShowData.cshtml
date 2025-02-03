@@ -1,0 +1,64 @@
+﻿@model List<student_registation.Models.studentReg>
+@{
+    ViewBag.Title = "ShowData";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    table {
+        box-shadow: 10px 5px 10px 4px lightcyan, -10px -5px 10px 2px lightcyan;
+       
+    }
+    thead{
+        background-color : lightcyan;
+    }
+
+    tbody>tr{
+        background-color : lightgrey;
+        border : 2px solid black;
+    }
+</style>
+<h2>ShowData</h2>
+
+<table border="1" cellspacing="2" cellpadding="8" >
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Middle Name</th>
+            <th>Last Name</th>
+            <th>Courses</th>
+            <th>Gender</th>
+            <th>Phone Code</th>
+            <th>Phone Number</th>
+            <th>Current Address</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Status</th>
+            <th colspan="2">Action</th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var m in Model)
+        {
+        <tr>
+            <td>@m.id</td>
+            <td>@m.FirstName</td>
+            <td>@m.MiddleName</td>
+            <td>@m.LastName</td>
+            <td>@m.Courses</td>
+            <td>@m.Gender</td>
+            <td>@m.PhoneCode</td>
+            <td>@m.Phone</td>
+            <td>@m.Curr_Address</td>
+            <td>@m.Email</td>
+            <td>@m.Password</td>
+            <td>@m.Status</td>
+            <td><a href="@Url.Action("Delete","Home", new {id = @m.id} )">Delete</a></td>
+            <td><a href="@Url.Action("student_update","Home", new {id = @m.id} )">Update</a></td>
+        </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,100 @@
+﻿
+@{
+    ViewBag.Title = "facebooklogin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<style>
+   
+    .login-containererr {
+        background-color: #ffffff;
+        border-radius: 8px;
+        padding: 30px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 360px;
+        text-align: center;
+        margin: 20px auto;
+    }
+
+        .login-containererr h2 {
+            color: #1877f2;
+        }
+
+    .login-button {
+        width: 100%;
+        padding: 10px;
+        background-color: #1877f2;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+        .login-button:hover {
+            background-color: #165e9c;
+        }
+
+    .or-divider {
+        margin: 15px 0;
+        position: relative;
+        text-align: center;
+    }
+
+        .or-divider:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            border-top: 1px solid #ddd;
+            margin-top: -1px;
+        }
+
+        .or-divider span {
+            background-color: #fff;
+            padding: 0 10px;
+            position: relative;
+            z-index: 1;
+            color: #666;
+        }
+
+    .input-field {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    .forgot-password {
+        text-align: right;
+        font-size: 12px;
+        color: #1877f2;
+    }
+
+        .forgot-password a {
+            color: #1877f2;
+            text-decoration: none;
+        }
+</style>
+
+    <div class="login-containererr">
+        <h2>Facebook Login</h2>
+        <form action="@Url.Action("login", "Home")" method="post">
+            <input type="text" class="input-field" placeholder="Email or Phone" name="Mobile_email" required><br>
+            <input type="password" class="input-field" placeholder="Password" name="password" required><br>
+            <button type="submit" class="login-button">Log In</button>
+        </form>
+        <div class="or-divider">
+            <span>or</span>
+        </div>
+        <button class="login-button" style="background-color: #42b72a;">Log in with Facebook</button>
+        <div class="forgot-password">
+            <a href="/Home/facebookregister">Forgotten account?</a>
+        </div>
+    </div>

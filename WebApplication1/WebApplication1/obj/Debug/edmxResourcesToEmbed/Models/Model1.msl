@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="demo_dbModelStoreContainer" CdmEntityContainer="conn">
+    <EntitySetMapping Name="insertRegistration_tbl">
+      <EntityTypeMapping TypeName="demo_dbModel.insertRegistration_tbl">
+        <MappingFragment StoreEntitySet="insertRegistration_tbl">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="cpassword" ColumnName="cpassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Webapplicationlogins">
+      <EntityTypeMapping TypeName="demo_dbModel.Webapplicationlogin">
+        <MappingFragment StoreEntitySet="Webapplicationlogin">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

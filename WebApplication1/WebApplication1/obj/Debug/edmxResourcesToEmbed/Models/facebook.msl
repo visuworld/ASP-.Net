@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="demo_dbModel1StoreContainer" CdmEntityContainer="demo_dbEntities">
+    <EntitySetMapping Name="facebookRegisters">
+      <EntityTypeMapping TypeName="demo_dbModel1.facebookRegister">
+        <MappingFragment StoreEntitySet="facebookRegister">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Full_Name" ColumnName="Full_Name" />
+          <ScalarProperty Name="Last_name" ColumnName="Last_name" />
+          <ScalarProperty Name="Mobile_email" ColumnName="Mobile_email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="month_date_year" ColumnName="month_date_year" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="insertRegistration_tbl">
+      <EntityTypeMapping TypeName="demo_dbModel1.insertRegistration_tbl">
+        <MappingFragment StoreEntitySet="insertRegistration_tbl">
+          <ScalarProperty Name="cpassword" ColumnName="cpassword" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Login_table">
+      <EntityTypeMapping TypeName="demo_dbModel1.Login_table">
+        <MappingFragment StoreEntitySet="Login_table">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="registration_table">
+      <EntityTypeMapping TypeName="demo_dbModel1.registration_table">
+        <MappingFragment StoreEntitySet="registration_table">
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Date_of_birth" ColumnName="Date_of_birth" />
+          <ScalarProperty Name="cpassword" ColumnName="cpassword" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+          <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="studentresults">
+      <EntityTypeMapping TypeName="demo_dbModel1.studentresult">
+        <MappingFragment StoreEntitySet="studentresult">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="gmail" ColumnName="gmail" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="sid" ColumnName="sid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="studenttables">
+      <EntityTypeMapping TypeName="demo_dbModel1.studenttable">
+        <MappingFragment StoreEntitySet="studenttable">
+          <ScalarProperty Name="enrollment_id" ColumnName="enrollment_id" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="gmail" ColumnName="gmail" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Webapplicationlogins">
+      <EntityTypeMapping TypeName="demo_dbModel1.Webapplicationlogin">
+        <MappingFragment StoreEntitySet="Webapplicationlogin">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

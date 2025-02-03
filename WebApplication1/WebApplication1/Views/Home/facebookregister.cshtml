@@ -1,0 +1,151 @@
+﻿
+@{
+    ViewBag.Title = "facebookregister";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="font-size: 50px; text-align: center; color:blue;">facebook</h2>
+
+
+
+<style>
+
+
+    .registration-containerf {
+        background-color: #ffffff;
+        border-radius: 8px;
+        padding: 30px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 380px;
+        margin: 30px auto;
+    }
+
+        .registration-containerf h2 {
+            color: #1877f2;
+            text-align: center;
+        }
+
+    .input-field {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    .signup-button {
+        width: 100%;
+        padding: 12px;
+        background-color: #42b72a;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+        .signup-button:hover {
+            background-color: #36a420;
+        }
+
+    .divider {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 20px 0;
+    }
+
+        .divider span {
+            width: 45%;
+            height: 1px;
+            background-color: #ddd;
+        }
+
+    .divider-text {
+        text-align: center;
+        color: #666;
+    }
+
+    .already-account {
+        text-align: center;
+        font-size: 14px;
+        color: #666;
+    }
+
+        .already-account a {
+            color: #1877f2;
+            text-decoration: none;
+        }
+
+    .birthdate-fields {
+        display: flex;
+        justify-content: space-between;
+    }
+
+        .birthdate-fields select {
+            width: 32%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+</style>
+
+
+<div class="registration-containerf">
+    <h2>Create a Facebook Account</h2>
+    
+    <form action="@Url.Action("register", "Home")" method="post">
+        <input type="text" class="input-field" placeholder="First name" name="Full_Name" required><br>
+        <input type="text" class="input-field" placeholder="Last name" name="Last_name" required><br>
+        <input type="text" class="input-field" placeholder="Mobile number or email" name="Mobile_email" required><br>
+        <input type="password" class="input-field" placeholder="New password" name="password" required><br>
+
+        <div class="birthdate-fields" name="month_date_year">
+            <select class="input-field">
+                <option value="" >Month</option>
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <!-- Add other months here -->
+            </select>
+            <select class="input-field">
+                <option value="" >Day</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <!-- Add other days here -->
+            </select>
+            <select class="input-field">
+                <option value="" >Year</option>
+                <option value="2000">2000</option>
+                <option value="2001">2001</option>
+                <!-- Add other years here -->
+            </select>
+        </div>
+
+        <div>
+            <label>
+                <input type="radio" name="gender" value="male"> Male
+            </label>
+            <label>
+                <input type="radio" name="gender" value="female"> Female
+            </label>
+        </div><br>
+
+        <button type="submit" class="signup-button">Sign Up</button>
+    </form>
+
+    <div class="divider">
+        <span></span>
+        <span class="divider-text">or</span>
+        <span></span>
+    </div>
+
+    <button class="signup-button" style="background-color: #1877f2;">Create an account with Google</button>
+
+    <div class="already-account">
+        <p>Already have an account? <a href="/Home/facebooklogin">Log in</a></p>
+    </div>
+</div>
+

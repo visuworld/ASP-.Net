@@ -1,0 +1,93 @@
+﻿
+@model List<WebApplication1.Models.insertRegistration_tbl>
+@{
+    ViewBag.Title = "table";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>table</h2>
+<style>
+    .table-containert {
+        width: 80%;
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        margin:10px auto;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+        table th,
+        table td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        table td {
+            background-color: #f9f9f9;
+        }
+
+        table tr:nth-child(even) td {
+            background-color: #f2f2f2;
+        }
+
+        table tr:hover td {
+            background-color: #e0e0e0;
+        }
+
+</style>
+<div class="table-containert">
+    <table border="2">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>fullname</th>
+                <th>email</th>
+                <th>password</th>
+                <th>cpassword </th>
+                <th>Action </th>
+                
+            </tr>
+
+        </thead>
+        @foreach (var m in Model)
+
+
+        {
+    <tbody>
+        <tr>
+
+            <td>@m.id</td>
+            <td>@m.fullname</td>
+
+            <td>@m.email</td>d
+            <td>@m.password</td>
+            <td>@m.cpassword</td>
+            <td><a href="@Url.Action("DeleteData","Home",new {id=m.id })">Delete</a></td>
+           
+    </tbody>
+                }
+
+
+
+           
+        </table>
+    </div>
+
+

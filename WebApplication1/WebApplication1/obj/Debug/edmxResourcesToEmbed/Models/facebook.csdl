@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="demo_dbModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="facebookRegister">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Full_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="month_date_year" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="demo_dbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="facebookRegisters" EntityType="Self.facebookRegister" />
+    <EntitySet Name="insertRegistration_tbl" EntityType="demo_dbModel1.insertRegistration_tbl" />
+    <EntitySet Name="Login_table" EntityType="demo_dbModel1.Login_table" />
+    <EntitySet Name="registration_table" EntityType="demo_dbModel1.registration_table" />
+    <EntitySet Name="studentresults" EntityType="demo_dbModel1.studentresult" />
+    <EntitySet Name="studenttables" EntityType="demo_dbModel1.studenttable" />
+    <EntitySet Name="Webapplicationlogins" EntityType="demo_dbModel1.Webapplicationlogin" />
+    <AssociationSet Name="FK__studentre__statu__4BAC3F29" Association="demo_dbModel1.FK__studentre__statu__4BAC3F29">
+      <End Role="studenttable" EntitySet="studenttables" />
+      <End Role="studentresult" EntitySet="studentresults" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="insertRegistration_tbl">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fullname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cpassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Login_table">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="registration_table">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cpassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Date_of_birth" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="studentresult">
+    <Key>
+      <PropertyRef Name="sid" />
+    </Key>
+    <Property Name="sid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Int32" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="Boolean" />
+    <NavigationProperty Name="studenttable" Relationship="demo_dbModel1.FK__studentre__statu__4BAC3F29" FromRole="studentresult" ToRole="studenttable" />
+  </EntityType>
+  <EntityType Name="studenttable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="Boolean" />
+    <Property Name="enrollment_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="studentresults" Relationship="demo_dbModel1.FK__studentre__statu__4BAC3F29" FromRole="studenttable" ToRole="studentresult" />
+  </EntityType>
+  <EntityType Name="Webapplicationlogin">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+  </EntityType>
+  <Association Name="FK__studentre__statu__4BAC3F29">
+    <End Type="demo_dbModel1.studenttable" Role="studenttable" Multiplicity="0..1" />
+    <End Type="demo_dbModel1.studentresult" Role="studentresult" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="studenttable">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="studentresult">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

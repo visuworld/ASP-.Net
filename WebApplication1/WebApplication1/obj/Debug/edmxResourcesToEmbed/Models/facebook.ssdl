@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="demo_dbModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="facebookRegister">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Full_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Last_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Mobile_email" Type="nvarchar" MaxLength="50" />
+    <Property Name="password" Type="nvarchar" MaxLength="30" />
+    <Property Name="month_date_year" Type="nvarchar" MaxLength="10" />
+    <Property Name="gender" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="insertRegistration_tbl">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fullname" Type="varchar" MaxLength="50" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="password" Type="varchar" MaxLength="50" />
+    <Property Name="cpassword" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Login_table">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="registration_table">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="First_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Last_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="cpassword" Type="nvarchar" MaxLength="50" />
+    <Property Name="Date_of_birth" Type="nvarchar" MaxLength="10" />
+    <Property Name="Gender" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="studentresult">
+    <Key>
+      <PropertyRef Name="sid" />
+    </Key>
+    <Property Name="sid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id" Type="int" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="gmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="status" Type="bit" />
+  </EntityType>
+  <EntityType Name="studenttable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="gmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="status" Type="bit" />
+    <Property Name="enrollment_id" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Webapplicationlogin">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <Association Name="FK__studentre__statu__4BAC3F29">
+    <End Role="studenttable" Type="Self.studenttable" Multiplicity="0..1" />
+    <End Role="studentresult" Type="Self.studentresult" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="studenttable">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="studentresult">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="demo_dbModel1StoreContainer">
+    <EntitySet Name="facebookRegister" EntityType="Self.facebookRegister" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="insertRegistration_tbl" EntityType="Self.insertRegistration_tbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Login_table" EntityType="Self.Login_table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="registration_table" EntityType="Self.registration_table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="studentresult" EntityType="Self.studentresult" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="studenttable" EntityType="Self.studenttable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Webapplicationlogin" EntityType="Self.Webapplicationlogin" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__studentre__statu__4BAC3F29" Association="Self.FK__studentre__statu__4BAC3F29">
+      <End Role="studenttable" EntitySet="studenttable" />
+      <End Role="studentresult" EntitySet="studentresult" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
