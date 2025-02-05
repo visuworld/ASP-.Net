@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Register</h2>
+
+<style>
+        .registration-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+            .registration-container h3 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+        .form-control {
+            margin-bottom: 15px;
+        }
+    </style>
+
+
+    <div class="registration-container">
+        <h3>Student Registration</h3>
+        <form action="@Url.Action("Register","Home")" method="post">
+
+            <!-- Student Name -->
+            <div class="mb-3">
+                <label for="studentName" class="form-label">Student Name</label>
+                <input type="text" class="form-control" id="studentName" name="name" required>
+            </div>
+
+            <!-- Roll Number -->
+            <div class="mb-3">
+                <label for="rollNumber" class="form-label">Roll Number</label>
+                <input type="text" class="form-control" id="rollNumber" name="roll" required>
+            </div>
+
+            <!-- Course -->
+            <div class="mb-3">
+                <label for="course" class="form-label">Course</label>
+                <select class="form-select" id="course" name="course" required>
+                    <option value="">Select Course</option>
+                    <option value="BSc">B.Sc.</option>
+                    <option value="BCom">B.Com.</option>
+                    <option value="BA">B.A.</option>
+                    <option value="BTech">B.Tech</option>
+                </select>
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="mobile" class="form-label">Mobile</label>
+                <input type="number" class="form-control" id="mobile" name="mobile" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div> 
+            <div class="mb-3">
+                <label for="re_password" class="form-label">Re-Password</label>
+                <input type="password" class="form-control" id="re_password" name="re_password" required>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-success w-100">Register</button>
+        </form>
+    </div>
+
+ 
+
+

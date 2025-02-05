@@ -1,0 +1,93 @@
+﻿@model List<Project_name.Models.std>
+@{
+    ViewBag.Title = "ViewData";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ViewData</h2>
+
+<style>
+ 
+    .container {
+        width: 80%;
+        margin-top: 20px;
+    }
+
+    h3 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    /* Styling for the Table */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
+
+    th, td {
+        padding: 12px;
+        text-align: left;
+        border: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f8f9fa;
+        color: #495057;
+        font-weight: bold;
+    }
+
+    td {
+        background-color: #ffffff;
+        color: #6c757d;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #e9ecef;
+    }
+</style>
+
+
+<!-- Table to Display Registered Students -->
+<div class="container mt-5">
+    <h3 class="text-center">Registered Students</h3>
+    <table id="studentsTable" border="1" cellpadding="4" cellspacing="4">
+        <thead>
+            <tr>
+                <th>Sr</th>
+                <th>Student Name</th>
+                <th>Roll Number</th>
+                <th>Course</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Password</th>
+                <th>Action</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var a in Model)
+            {
+                <tr>
+                    <td>@a.id</td>
+                    <td>@a.name</td>
+                    <td>@a.roll</td>
+                    <td>@a.course</td>
+                    <td>@a.email</td>
+                    <td>@a.mobile</td>
+                    <td>@a.password</td>
+                    <td>
+                        <a href="@Url.Action("Delete", "Home", new {id=@a.id})"><button class="btn btn-danger">Delete</button></a>
+                        <a href="@Url.Action("Update", "Home", new {id=@a.id})"> <button class="btn btn-warning"> Edit</button></a>
+                    </td>
+                </tr>
+
+            }
+
+                </tbody>
+    </table>
+</div>
