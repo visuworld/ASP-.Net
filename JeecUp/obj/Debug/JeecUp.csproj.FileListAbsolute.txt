@@ -77,3 +77,7 @@ C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\obj\Debug\JeecUp.csproj.Co
 C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\obj\Debug\JeecUp.csproj.Up2Date
 C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\obj\Debug\JeecUp.dll
 C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\obj\Debug\JeecUp.pdb
+C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\bin\EntityFramework.dll
+C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\bin\EntityFramework.SqlServer.dll
+C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\bin\EntityFramework.xml
+C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\bin\EntityFramework.SqlServer.xml

@@ -2,6 +2,17 @@
 
 }
 
+h1{
+    font-size: 26px;
+}
+h3{
+    font-size :20px;
+}
+ec{
+    margin-right:2px;
+    
+}
+
 .form-container {
     width: 80%;
     margin: 20px auto;
@@ -27,6 +38,7 @@ label {
 }
 
 input, select {
+    display : inline;
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -38,6 +50,10 @@ input, select {
     input[type="radio"] {
         width: auto;
         margin-right: 10px;
+    }
+
+    .captcha{
+        height: 47px;   
     }
 
 button {
@@ -53,5 +69,4 @@ button {
 
     button:hover {
         background-color: #0056b3;
-                    
     }

@@ -5,27 +5,37 @@
 }
 
 
-<div class="formcontainer">
-    <div class="textcenter">
+<div class="form-container">
+    <div class="text-center">
         <h4>Registration Form</h4>
     </div>
 
     <form action="#" method="post">
         <section class="formsection">
             <h3>Personal Details</h3>
+            <div class="row">
+                <div class="col-sm-6">
+                    <label for="name">Name (नाम)</label>
+                    <input type="text" id="name" name="name" placeholder="Candidate Name" required>
+                </div>
 
-            <label for="name">Name (नाम)</label>
-            <input type="text" id="name" name="name" placeholder="Candidate Name" required>
+                <div class="col-sm-6">
+                    <label for="fathername">Father's Name (पिता का नाम)</label>
+                    <input type="text" id="fathername" name="fathername" placeholder="Father Name" required>
+                </div>
+                </div>
 
-            <label for="fathername">Father's Name (पिता का नाम)</label>
-            <input type="text" id="fathername" name="fathername" placeholder="Father Name" required>
+            <div class="row">
+                <div class="col-sm-6">
+                    <label for="mothername">Mother's Name (मां का नाम)</label>
+                    <input type="text" id="mothername" name="mothername" placeholder="Mother Name" required>
+                </div>
 
-            <label for="mothername">Mother's Name (मां का नाम)</label>
-            <input type="text" id="mothername" name="mothername" placeholder="Mother Name" required>
-
-            <label for="dob">Date of Birth (जन्म तिथि)</label>
-            <input type="date" id="dob" name="dob" required>
-
+                <div class="col-sm-6">
+                    <label for="dob">Date of Birth (जन्म तिथि)</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+            </div>
             <label for="gender">Gender (लिंग)</label>
             <select id="gender" name="gender">
                 <option value="male">Male</option>
@@ -57,38 +67,67 @@
             </label>
         </section>
 
+
         <section class="formsection">
             <h3>Contact Details</h3>
+            <div class="row">
+                <div class="col-sm-2">
+                <label for="isdcode">ISD Code</label>
+                <select>
+                    <option>India(91)</option>
+                </select>
+                </div>
 
-            <label for="isdcode">ISD Code</label>
-            <select>
-                <option>India(91)</option>
-            </select>
+                <div class="col-sm-5">
+                    <label for="mobile">Mobile Number (मोबाइल नंबर)</label>
+                    <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number" required>
+                </div>
 
-            <label for="mobile">Mobile Number (मोबाइल नंबर)</label>
-            <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number" required>
-
-            <label for="email">Email ID (ईमेल आईडी)</label>
-            <input type="email" id="email" name="email" placeholder="Email ID" required>
+                <div class="col-sm-5">
+                    <label for="email">Email ID (ईमेल आईडी)</label>
+                    <input type="email" id="email" name="email" placeholder="Email ID" required>
+                </div>
+            </div>
         </section>
+
+
 
         <section class="formsection">
             <h3>Create Password</h3>
+            <div class="row">
+                <div class="col-sm-6">
+                    <label for="password">Choose your Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
 
-            <label for="password">Choose your Password</label>
-            <input type="password" id="password" name="password" required>
-
-            <label for="confirmpassword">Confirm Password</label>
-            <input type="password" id="confirmpassword" name="confirmpassword" required>
-        </section>
+                <div class="col-sm-6">
+                    <label for="confirmpassword">Confirm Password</label>
+                    <input type="password" id="confirmpassword" name="confirmpassword" required>
+                    </div>
+                </div>
+         </section>
 
         <section class="formsection">
             <h3>Security Pin</h3>
 
-            <label for="securitypin">Security Pin</label>
-            <input type="password" id="securitypin" name="securitypin" required>
+            <div class="row">
+                <div class="col-sm-6">
+                    <label for="securitypin">Security Pin</label>
+                    <input type="password" id="securitypin" name="securitypin" required>
+                    </div>
 
-            <button type="submit">Submit</button>
-        </section>
+                <div class="col-sm-3">
+                    <label for="captcha">Security Pin</label>
+                    <input type="image" class="captcha" src="~/Content/Images/CaptchaImg.jpeg"/>
+                    </div>
+                <div class="col-sm-1">
+                    <img src="~/Content/Images/Refresh.png" style="margin-top: 25px;" />
+                </div>
+                   
+                </div>
+
+            </div>
+                <button type="submit">Submit</button>
+</section>
     </form>
 </div>
