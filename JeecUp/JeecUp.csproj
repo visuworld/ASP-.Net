@@ -163,6 +163,7 @@
     <Content Include="Content\Images\nicLogo.png" />
     <Content Include="Content\CSS\style.css" />
     <Content Include="Content\Images\Refresh.png" />
+    <Content Include="Content\JS\regform.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Models\Model1.Context.tt">
@@ -215,7 +216,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\JS\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -3,7 +3,9 @@
     ViewBag.Title = "Registration_Form";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="~/Content/JS/regform.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <div class="form-container">
     <div class="text-center">
@@ -48,20 +50,20 @@
             <h3>Aadhaar Information</h3>
 
             <label>
-                <input type="radio" name="aadhaar" value="agree" required>
+                <input type="radio" name="aadhaar" class="adhar" value="agree" required>
                 I voluntarily agree to share my Aadhaar Number and I am aware that it will be used to establish my identity for UPJEE2025. <br />
                 मैं स्वेच्छा से अपना आधार नंबर साझा करने के लिए सहमत हूं और मुझे पता है कि इसका उपयोग यूआईडीएआई के आधार रिकॉर्ड में उपलब्ध मेरे व्यक्तिगत पहचान विवरण का मिलान करके UPJEE2025 के लिए मेरी पहचान स्थापित करने के लिए किया जाएगा।
             </label>
 
             <label>
-                <input type="radio" name="aadhaar" value="agree" required>
+                <input type="radio" name="aadhaar" class="adhar" value="agree" required>
                 My information on Aadhaar is not the same as entered in the Application Form. <br />
                 आधार कार्ड पर मेरी जानकारी वही नहीं है जो आवेदन पत्र में दर्ज की गई है |
             </label>
 
 
             <label>
-                <input type="radio" name="aadhaar" value="disagree" required>
+                <input type="radio" name="aadhaar" class="adhar" value="disagree" required>
                 I am not willing to share my Aadhaar Number.<br />
                 मैं अपना आधार नंबर साझा करने को तैयार नहीं हूं।
             </label>
@@ -80,7 +82,7 @@
 
                 <div class="col-sm-5">
                     <label for="mobile">Mobile Number (मोबाइल नंबर)</label>
-                    <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number" required>
+                    <input type="text" onkeypress="validation(this)" id="mobile" name="mobile"  placeholder="Mobile Number" required>
                 </div>
 
                 <div class="col-sm-5">
@@ -127,7 +129,14 @@
                 </div>
 
             </div>
-                <button type="submit">Submit</button>
+
+
+                <button type="button" onclick="SubmitForm()">Submit</button>
+
+
+
+
+
 </section>
     </form>
-</div>
+
