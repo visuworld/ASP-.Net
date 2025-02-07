@@ -16,7 +16,7 @@
     if (name == null || name == "")
     {
         Swal.fire({
-            icon: "warning",
+            icon: "warning",    
             title: "warning...",
             text: "Name is Required !"
         });
@@ -43,6 +43,7 @@
     }
 
 }
+
 function validation(e)
 {
     debugger;
