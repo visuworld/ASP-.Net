@@ -51,6 +51,8 @@ C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\bin\roslyn\vbc.rsp
 C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\bin\roslyn\VBCSCompiler.exe
 C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\bin\Antlr3.Runtime.dll
+C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\bin\EntityFramework.dll
+C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\bin\EntityFramework.SqlServer.dll
 C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\bin\Newtonsoft.Json.dll
@@ -62,6 +64,8 @@ C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\bin\System.Web.WebPages.De
 C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\bin\System.Web.WebPages.dll
 C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\bin\System.Web.WebPages.Razor.dll
 C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\bin\WebGrease.dll
+C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\bin\EntityFramework.xml
+C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\bin\EntityFramework.SqlServer.xml
 C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\bin\System.Web.Helpers.xml
 C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\bin\System.Web.Mvc.xml
 C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\bin\System.Web.Optimization.xml
@@ -77,7 +81,3 @@ C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\obj\Debug\JeecUp.csproj.Co
 C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\obj\Debug\JeecUp.csproj.Up2Date
 C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\obj\Debug\JeecUp.dll
 C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\obj\Debug\JeecUp.pdb
-C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\bin\EntityFramework.dll
-C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\bin\EntityFramework.SqlServer.dll
-C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\bin\EntityFramework.xml
-C:\Users\visha\Desktop\EU-CODERS\.NET\ASP .NET\JeecUp\bin\EntityFramework.SqlServer.xml
