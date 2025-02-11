@@ -39,6 +39,8 @@
         });
         return;
     }
+
+
     $.ajax({
         url: '../Home/SaveRecord',
         type: 'POST',
@@ -46,11 +48,12 @@
             Name: name, Father: fathername, Mother: mothername, DOB: dob, Gender: gender,
             Mobile: mobile, Email: email, Password: password, Cpwd: confirmpassword
         } // Key:value
-        , success: function (response) {
+        , success: function (response)
+        {
             Swal.fire({
                 icon: "success",
                 title: response.Message,
-                text: "mother name is Required !"
+                text: "Form Saved Successfully "
 
             });
         }

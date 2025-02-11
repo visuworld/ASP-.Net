@@ -36,10 +36,11 @@ namespace JeecUp.DAL
                 new SqlParameter{ParameterName="@email",Value=model.email},
                 new SqlParameter{ParameterName="@password",Value=model.password},
                 new SqlParameter{ParameterName="@confirmpassword",Value=model.confirmpassword},
+
             };
 
             var proc = @"Proc_InsertData @name,@fathername,@mothername,@dob,@gender,@mobile,@email,@password,@confirmpassword";
-            var list = this.Database.SqlQuery<RegisterModel>(proc, SqlParams).ToList().FirstOrDefault();
+            var list = this.Database.SqlQuery<RegisterModel>(proc, SqlParams).ToList().First();
             return list;
         
         }                                      
