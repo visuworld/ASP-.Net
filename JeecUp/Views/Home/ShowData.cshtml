@@ -1,0 +1,46 @@
+﻿@model List<JeecUp.Models.RegisterModel>
+@{
+    ViewBag.Title = "ShowData";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ShowData</h2>
+
+<div class="form-container">
+    <div class="table table-responsive">
+        <table border="1" cellpadding="20" width="100%">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Father Name</th>
+                    <th>Mother Name</th>
+                    <th>D.O.B</th>
+                    <th>Gender</th>
+                    <th>Mobile</th>
+                    <th>E-mail</th>
+                    <th>Password</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @if (Model != null)
+                {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.name</td>
+                        <td>@item.fathername</td>
+                        <td>@item.mothername</td>
+                        <td>@item.dob</td>
+                        <td>@item.gender</td>
+                        <td>@item.mobile</td>
+                        <td>@item.email</td>
+                        <td>@item.password</td>
+                       
+                    </tr>
+                }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

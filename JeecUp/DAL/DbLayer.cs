@@ -43,7 +43,22 @@ namespace JeecUp.DAL
             var list = this.Database.SqlQuery<RegisterModel>(proc, SqlParams).ToList().First();
             return list;
         
-        }                                      
+        }
+
+
+        public List<RegisterModel> GetDatafromProc()
+        {
+            var SqlParams = new SqlParameter[]
+            {
+                
+            };
+
+            var proc = @"GetRegistrationData";
+            var list = this.Database.SqlQuery<RegisterModel>(proc, SqlParams).ToList();
+            return list;
+
+        }
+
 
     }
 }

@@ -44,5 +44,18 @@ namespace JeecUp.Controllers
             return Json(new {Message=res.msg, success=true});
         }
 
+
+        public ActionResult ShowData()
+        {
+            var abc =db.GetDatafromProc().ToList();
+            return View(abc);
+        }
+
+        public ActionReasult UpdateData(int id)
+        {
+
+            return View();
+        }
+
     }
 }

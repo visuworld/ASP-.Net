@@ -44,8 +44,8 @@
                         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div class="navbar-nav">
                                 <i class="bi bi-house-door-fill" style="margin-top:7px;"></i>  @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
-                                @Html.ActionLink("Registration", "Registration_Form", "Home", new { area = "" }, new { @class = "nav-link" })
-
+                                @Html.ActionLink("Registration", "Registration_Form", "Home", new { area = "" }, new { @class = "nav-link btn btn-primary"})
+                                <a href="@Url.Action("ShowData","Home")" class="btn btn-primary">Show Data</a>
                             </div>
                         </div>
                     </div>
