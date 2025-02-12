@@ -51,9 +51,11 @@ namespace JeecUp.Controllers
             return View(abc);
         }
 
-        public ActionReasult UpdateData(int id)
+        public ActionResult UpdateData(int id)
         {
 
+            var abc = db.GetDatafromProc().ToList();
+            
             return View();
         }
 
