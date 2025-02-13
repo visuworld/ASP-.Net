@@ -29,6 +29,7 @@ namespace JeecUp.Controllers
             string Mobile,string Email, string Password, string Cpwd)
         {
             RegisterModel model = new RegisterModel();
+            //model.id;
             model.name = Name;
             model.fathername = Father;
             model.mothername = Mother;
@@ -57,6 +58,13 @@ namespace JeecUp.Controllers
             var abc = db.GetDatafromProc().ToList();
             
             return View();
+        }
+
+        public void Delete(int id)
+        {
+            var res = db.DeleteRecord(id);
+            Response.Write("<script>alert('Deleted Record'; window.location.href='home/ShowData')</script>");
+            //return RedirectToAction("ShowData");
         }
 
     }

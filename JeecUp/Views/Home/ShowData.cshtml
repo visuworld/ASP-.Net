@@ -11,6 +11,7 @@
         <table border="1" cellpadding="20" width="100%">
             <thead>
                 <tr>
+                    <th>ID</th>
                     <th>Name</th>
                     <th>Father Name</th>
                     <th>Mother Name</th>
@@ -29,6 +30,7 @@
                 foreach (var item in Model)
                 {
                     <tr>
+                        <td>@item.id</td>
                         <td>@item.name</td>
                         <td>@item.fathername</td>
                         <td>@item.mothername</td>
@@ -38,8 +40,9 @@
                         <td>@item.email</td>
                         <td>@item.password</td>
                         <td>
-                            <a href="">Update</a>
-                            <a>Delete</a>
+                            <a href="@Url.Action("Delete","Home", new {id=@item.id})" class="btn btn-danger">Delete</a>
+                            <a href="@Url.Action("Update","Home", new {id=@item.id})" class="btn btn-danger">Edit</a>
+                            
                         </td>
                        
                     </tr>

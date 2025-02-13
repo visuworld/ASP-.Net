@@ -22,7 +22,7 @@ namespace JeecUp.DAL
         }
 
         // Calling Db Proc Start 
-
+         
         public RegisterModel InsertData_Regform(RegisterModel model)
         {
             var SqlParams = new SqlParameter[]
@@ -55,6 +55,20 @@ namespace JeecUp.DAL
 
             var proc = @"GetRegistrationData";
             var list = this.Database.SqlQuery<RegisterModel>(proc, SqlParams).ToList();
+            return list;
+
+        }
+
+        public RegisterModel DeleteRecord(int id)
+        {
+            var SqlParams = new SqlParameter[]
+           {
+                new SqlParameter{ParameterName="@id",Value=id},
+
+           };
+
+            var proc = @"proc_deleteRecord @id";
+            var list = this.Database.SqlQuery<RegisterModel>(proc, SqlParams).ToList().FirstOrDefault();
             return list;
 
         }
